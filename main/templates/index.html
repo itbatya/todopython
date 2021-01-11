@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style/index.css">
+	<link rel="stylesheet" href="style/checkbox.css">
+	<title>ToDoList</title>
+</head>
+<body>
+	<header>
+		<div class="header_text">
+			<h1>ToDoList</h1>
+		</div>
+	</header>
+
+	<main>
+		<div class="create_container">
+			<input class="create_input" type="text" placeholder="Напишите новую задачу">
+			<button class="create_button">Добавить</button>
+		</div>
+		<div class="todo_container">
+
+			<div class="todo_item">
+				<div class="todo_item_header">
+					<label class="checkbox_container">
+						<input type="checkbox" id="checkbox">
+						<span class="checkmark"></span>
+					</label>
+					<p>Убраться в комнате</p>
+				</div>
+				<div class="todo_item_footer">
+					<p>05.01.2021 <span>09:00</span></p>
+					<div class="action_buttons">
+						<img id="star" src="./icons/star.png" alt="">
+						<img src="./icons/remove.png" alt="">
+					</div>
+				</div>
+			</div>
+
+			<div class="todo_item marked">
+				<div class="todo_item_header">
+					<label class="checkbox_container">
+						<input type="checkbox" id="checkbox">
+						<span class="checkmark"></span>
+					</label>
+					<p>Убраться в комнате</p>
+				</div>
+				<div class="todo_item_footer">
+					<p>05.01.2021 <span>09:00</span></p>
+					<div class="action_buttons">
+						<img id="star" src="./icons/star2.png" alt="">
+						<img src="./icons/remove.png" alt="">
+					</div>
+				</div>
+			</div>
+
+			<div class="todo_item done">
+				<div class="todo_item_header">
+					<label class="checkbox_container">
+						<input type="checkbox" id="checkbox">
+						<span class="checkmark"></span>
+					</label>
+					<p>Убраться в комнате</p>
+				</div>
+				<div class="todo_item_footer">
+					<p>05.01.2021 <span>09:00</span></p>
+					<div class="action_buttons">
+						<img id="star" src="./icons/star.png" alt="">
+						<img src="./icons/remove.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html>

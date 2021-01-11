@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+header{
+    width: 100%;
+    height: 60px;
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header_text{
+    width: 90%;
+    color: #2E2E2E;
+}
+
+
+main{
+    width: 100%;
+    display: flex;
+    padding: 20px 0;
+    flex-direction: column;
+    align-items: center;
+}
+.create_container{
+    width: 90%;
+    display: flex;
+}
+.create_input{
+    width: 90%;
+    height: 40px;
+    border: 2px solid #6E6E6E;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 18px;
+    margin-right: 20px;
+}
+.create_button{
+    width: 200px;
+    height: 40px;
+    border: 2px solid #424242;
+    border-radius: 5px;
+    background-color: #57a703;
+    color: #fff;
+    font-size: 18px;
+}
+
+
+
+.todo_container{
+    width: 90%;
+    padding: 30px 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 20px;
+}
+.todo_item{
+    min-width: 32%;
+
+    padding: 10px 15px;
+    border: 1px solid #BDBDBD;
+    border-radius: 5px;
+    background-color: #BEF781;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transition: all 1s;
+}
+.todo_item.marked{
+    background-color: #F5BCA9;
+}
+.todo_item.done{
+    background-color: #bebebe;
+    text-decoration: line-through;
+}
+
+
+.todo_item_header{
+    display: flex;
+    min-height: 35px;
+}
+.todo_item_header p{
+    font-size: 18px;
+    padding-top: 4px;
+}
+.todo_item_footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.todo_item_footer img{
+    width: 25px;
+    height: 25px;
+} 
+
+
+.checkbox_container input:checked~.todo_item_header{
+    background-color: gray;
+}
