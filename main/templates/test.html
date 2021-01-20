@@ -19,9 +19,13 @@
 
 	<main>
 		<div class="create_container">
-			<input class="create_input" type="text" placeholder="Напишите новую задачу">
-			<button class="create_button">Добавить</button>
+			<form action="{% url 'add-todo' %}" method="POST">
+				{% csrf_token %}
+				<input class="create_input" type="text" placeholder="Напишите новую задачу" name="todo_text">
+				<button class="create_button">Добавить</button>
+			</form>
 		</div>
+
 		<div class="todo_container">
             {% for todo in todo_list %}
 			<div class="todo_item">
@@ -40,7 +44,8 @@
 					</div>
 				</div>
             </div>
-            {% endfor %}
+			{% endfor %}
+			
 		</div>
 	</main>
 </body>

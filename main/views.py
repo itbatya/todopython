@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
 from .models import ToDo
 
 # Create your views here.
@@ -25,3 +25,11 @@ def changed(request):
 
 def deleted(request):
     return render(request, "deleted.html")
+
+
+def add_todo(request):
+    data = request.POST
+    text = data["todo_text"]
+    todo = ToDo(text=text)
+    todo.save()
+    return redirect(test)
