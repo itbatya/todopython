@@ -77,16 +77,25 @@ main{
     background-color: #F5BCA9;
 }
 .todo_item.done{
+    opacity: 0.7;
     background-color: #bebebe;
     text-decoration: line-through;
 }
-
+.todo_item.marked.done{
+    opacity: 0.7;
+    background-color: #e0a5a5;
+    text-decoration: line-through;
+}
 
 .todo_item_header{
     display: flex;
     min-height: 35px;
 }
+.todo_item_header a{
+    text-decoration: none;
+}
 .todo_item_header p{
+    color: #000;
     font-size: 18px;
     padding-top: 4px;
 }
